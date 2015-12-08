@@ -1,0 +1,33 @@
+{
+  "name": "Morphit",
+  "version": "0.0.1",
+  "description": "A HTTP API for converting text documents from the web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SubjectRefresh/Morphit.git"
+  },
+  "keywords": [
+    "pdf",
+    "html",
+    "API",
+    "node.js",
+    "express"
+  ],
+  "author": "Finnian Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SubjectRefresh/Morphit/issues"
+  },
+  "homepage": "https://SubjectRefresh.info/morphit",
+  "dependencies": {
+    "express": "^4.13.3",
+    "pdftohtmljs": "^0.3.7",
+    "request": "^2.67.0",
+    "sha1": "^1.1.1"
+  },
+  "apidoc": {}
+}

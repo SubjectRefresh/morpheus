@@ -1,0 +1,106 @@
+<!DOCTYPE <html>
+
+<head>
+    <title>Morphit | A conversion API</title>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="common/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Morphit</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="docs">Docs</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="max-size 1" data-number="1">
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-xs-12">
+                    <h2>Convert anything&#8230<span class="glyphicon glyphicon-file" aria-hidden="true" style="float:right;font-size:50px"></span></h2>
+                </div>
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-md-offset-2 col-sm-offset-2 col-sm-8 col-xs-12">
+                    <h2><span class="glyphicon glyphicon-ok" aria-hidden="true" style="font-size:50px"></span><span style="float: right;">&#8230into anything</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="max-size 2" data-number="2">
+        </div>
+        <div class="max-size 3" data-number="3">
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="common/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="common/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        var pane = "red";
+
+        var prevScrollTop = $(document).scrollTop();
+
+        $(document).scroll(function() {
+            var currentScrollTop = $(this).scrollTop();
+            if (isScrolledIntoView($(".max-size.1"))) {
+            }
+            if (isScrolledIntoView($(".max-size.2"))) {
+                // $(".max-size.grey").css("transform", "scale(" + (currentScrollTop / 1000) + ", " + (currentScrollTop / 1000) + ")");
+            }
+            if (isScrolledIntoView($(".max-size.3"))) {
+            }
+            if (currentScrollTop > prevScrollTop) {
+                // console.log("Going down!");
+            } else {
+                // console.log("Going up!");
+            }
+            prevScrollTop = currentScrollTop;
+        });
+
+    });
+
+    function isScrolledIntoView(el) {
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            el = el[0];
+        }
+
+        var rect = el.getBoundingClientRect(),
+            vWidth = window.innerWidth || doc.documentElement.clientWidth,
+            vHeight = window.innerHeight || doc.documentElement.clientHeight,
+            efp = function(x, y) {
+                return document.elementFromPoint(x, y)
+            };
+
+        // Return false if it's not in the viewport
+        if (rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight)
+            return false;
+
+        // Return true if any of its four corners are visible
+        return (
+            el.contains(efp(rect.left, rect.top)) || el.contains(efp(rect.right, rect.top)) || el.contains(efp(rect.right, rect.bottom)) || el.contains(efp(rect.left, rect.bottom))
+        );
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+* {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+body {
+    padding-top: 50px;
+    background: -moz-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(170, 0, 255, 1)), color-stop(100%, rgba(227, 0, 255, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(180deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* w3c */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#aa00ff', endColorstr='#e300ff', GradientType=0);
+    /* ie6-9 */
+}
+
+.navbar.navbar-default {
+    color: #fff;
+    border: 0;
+    background: transparent;
+}
+
+a.navbar-brand {
+    font-size: 25px;
+}
+
+.navbar-toggle {
+    border: 2px solid transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #d000ff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar.navbar-default a,
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar.navbar-default a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #ececec;
+}
+
+.max-size {
+    width: 100%;
+    min-height: 100%;
+    background: transparent;
+}
+
+.max-size > .row > div {
+    min-height: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-collapse {
+        background: #d000ff;
+        border-top: 0;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    body {
+        margin-top: 25px;
+    }
+    .navbar.navbar-default.navbar-fixed-top {
+        background: #AC00FF;
+        border-bottom: 1px solid #fff;
+    }
+}

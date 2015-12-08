@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+* {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+}
+
+body.loaded {
+    padding-top: 50px;
+    background: -moz-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(170, 0, 255, 1)), color-stop(100%, rgba(227, 0, 255, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(180deg, rgba(170, 0, 255, 1) 0%, rgba(227, 0, 255, 1) 100%);
+    /* w3c */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#aa00ff', endColorstr='#e300ff', GradientType=0);
+    /* ie6-9 */
+}
+
+button,
+button > strong,
+th {
+    color: #333;
+}
+
+p,
+#generator .content {
+    color: #fff;
+}
+
+.sidenav > li.nav-header.active > a {
+    background-color: #AC00FF;
+}
+
+a,
+a:hover,
+a:focus a:visited {
+    color: #AC00FF;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+    background-color: #AC00FF;
+}
+
+@media only screen and (max-width: 995px) {
+    #sidenav {
+        display: none;
+    }
+    #content {
+        margin-left: 0;
+    }
+}

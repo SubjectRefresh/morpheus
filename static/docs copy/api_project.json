@@ -1,0 +1,1 @@
+{  "name": "Morphit",  "version": "0.0.1",  "description": "A HTTP API for converting text documents from the web",  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2015-12-08T19:17:38.651Z",    "url": "http://apidocjs.com",    "version": "0.13.1"  }}
