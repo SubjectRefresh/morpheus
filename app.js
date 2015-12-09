@@ -47,13 +47,6 @@ var app = express();
 
 app.use('/', express.static(__dirname + '/static'));
 
-// app.get("/docs", function(req, res) {
-// 	res.status(200);
-// 	fs.readFile("docs/index.html", "utf-8", function(err, data) {
-//     	res.send(data);
-//     });
-// });
-
 app.use('/docs', express.static(__dirname + '/static/docs'));
 
 app.get("/api/*", function(req, res) {
