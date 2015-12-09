@@ -57,6 +57,7 @@ app.use('/', express.static(__dirname + '/static'));
 app.use('/docs', express.static(__dirname + '/static/docs'));
 
 app.get("/api/*", function(req, res) {
+    console.log("Got request for /api to convert " + req.query.url + " from " + req.query.from + " to " + req.query.to);
     // req.query contains URL parameters
     if (!req.query.url) {
         res.status(400);
