@@ -1,5 +1,5 @@
 {
-  "name": "Morphit",
+  "name": "Morpheus",
   "version": "0.0.1",
   "description": "A HTTP API for converting text documents from the web",
   "main": "app.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SubjectRefresh/Morphit.git"
+    "url": "git+ssh://git@github.com/SubjectRefresh/Morpheus.git"
   },
   "keywords": [
     "pdf",
@@ -20,9 +20,9 @@
   "author": "Finnian Anderson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SubjectRefresh/Morphit/issues"
+    "url": "https://github.com/SubjectRefresh/Morpheus/issues"
   },
-  "homepage": "https://SubjectRefresh.info/morphit",
+  "homepage": "https://SubjectRefresh.info/morpheus",
   "dependencies": {
     "express": "^4.13.3",
     "pdftohtmljs": "^0.3.7",

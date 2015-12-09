@@ -146,5 +146,5 @@ var server = app.listen(3002, function() {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log('Morphit listening at http://%s:%s', host, port);
+    console.log('Morpheus listening at http://%s:%s', host, port);
 });
