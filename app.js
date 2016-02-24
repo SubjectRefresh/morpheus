@@ -53,24 +53,21 @@ app.get("/api/*", function(req, res) {
     console.log("Got request for /api to convert " + req.query.url + " from " + req.query.from + " to " + req.query.to);
     // req.query contains URL parameters
     if (!req.query.url) {
-        res.status(400);
-        res.json({
+        res.status(400).json({
             code: 400,
             error: "InvalidURL",
             message: "Please specify a valid URL"
         });
     }
-    if (!req.query.from) {
-        res.status(400);
-        res.json({
+    else if (!req.query.from) {
+        res.status(400).json({
             code: 400,
             error: "InvalidFromFormat",
             message: "Please specify a format to convert from"
         });
     }
-    if (!req.query.to) {
-        res.status(400);
-        res.json({
+    else if (!req.query.to) {
+        res.status(400).json({
             code: 400,
             error: "InvalidToFormat",
             message: "Please specify a format to convert to"
@@ -81,9 +78,8 @@ app.get("/api/*", function(req, res) {
                 var id = sha1(req.query.url);
                 try {
                     stats = fs.lstatSync('files/' + id + ".html");
-                    res.status(200);
                     fs.readFile("files/" + id + ".html", "utf-8", function(err, data) {
-                        res.json({
+                        res.status(200).json({
                             url: req.query.url,
                             html: data,
                             from: req.query.from.toLowerCase(),
@@ -95,9 +91,8 @@ app.get("/api/*", function(req, res) {
                     getPDF.on("finish", function() {
                         var converter = new pdf("files/" + id + ".pdf", "files/" + id + ".html");
                         converter.success(function() {
-                            res.status(200);
                             fs.readFile("files/" + id + ".html", "utf-8", function(err, data) {
-                                res.json({
+                                res.status(200).json({
                                     url: req.query.url,
                                     html: data,
                                     from: req.query.from.toLowerCase(),
@@ -106,8 +101,7 @@ app.get("/api/*", function(req, res) {
                             });
                         });
                         converter.error(function(err) {
-                            res.status(500);
-                            res.json({
+                            res.status(500).json({
                                 code: 500,
                                 error: "InternalServerError",
                                 message: "Oops, we couldn't convert that PDF, please try again"
@@ -118,16 +112,14 @@ app.get("/api/*", function(req, res) {
                     });
                 }
             } else {
-                res.status(400);
-                res.json({
+                res.status(400).json({
                     code: 400,
                     error: "UnsupportedToFormat",
                     message: "Sorry, we don't currently support " + req.query.to
                 });
             }
         } else {
-            res.status(400);
-            res.json({
+            res.status(400).json({
                 code: 400,
                 error: "UnsupportedFromFormat",
                 message: "Sorry, we don't currently support " + req.query.from
